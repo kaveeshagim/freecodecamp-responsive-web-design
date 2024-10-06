@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --green1: #12372a;
+  --green2: #436850;
+  --green3: #adbc9f;
+  --green4: #fbfada;
+  --white: #fff;
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--green4);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  background: var(--green1);
+  z-index: 1000;
+}
+
+#navbar ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar ul li {
+  list-style: none;
+}
+
+#navbar ul li:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: var(--green3);
+  font-weight: bold;
+}
+
+#navbar ul li a:hover {
+  color: var(--green4);
+}
+
+#welcome-section {
+  padding-top: 4rem;
+  height: 60vh;
+  width: 100%;
+  background: var(--green2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#welcome-section .text-container {
+  border-bottom: 2px solid var(--green4);
+  border-top: 2px solid var(--green4);
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  width: 30%;
+  text-align: center;
+}
+
+#welcome-section .text-container p {
+  font-weight: 600;
+  color: var(--green4);
+}
+
+#projects {
+  margin-top: 3rem;
+}
+
+#projects p {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+#projects .project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 1rem;
+  margin: 1rem auto;
+  justify-content: center; /* Center the grid horizontally */
+  max-width: 1200px; /* Set a max width for the grid */
+}
+
+.project-tile {
+  display: flex;
+  flex-direction: column; /* Ensure proper stacking */
+}
+
+.project-tile a {
+  text-decoration: none;
+  color: var(--green2);
+  border-bottom: 2px solid var(--green2);
+}
+
+.project-tile img {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border: 4px solid var(--green2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-tile img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+#contact {
+  width: 85%;
+  height: auto;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--green3);
+  border-radius: 15px;
+}
+
+#contact p {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#contact ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#contact ul li {
+  list-style: none;
+}
+
+#contact ul li a {
+  text-decoration: none;
+  color: var(--green4);
+}
+
+#contact ul li a:hover {
+  color: var(--green1);
+}
+
+#contact ul li i {
+  padding-right: 10px;
+}
+
+footer {
+  background: var(--green1);
+  padding: 1rem;
+  text-align: center;
+  color: var(--white);
+  font-size: 0.7rem;
+  width: 100%; /* Ensure footer takes full width */
+}
+
+@media (max-width: 768px) {
+  #projects .project-grid {
+    grid-template-columns: 1fr; /* Stack items on top of each other */
+  }
+
+  #projects .project-grid > div {
+    margin: 1rem 0; /* Add vertical margin to each grid item */
+  }
+
+  #welcome-section .text-container {
+    width: 90%; /* Make the welcome text container wider */
+  }
+
+  #contact {
+    width: 90%; /* Make the contact section wider */
+  }
+
+  header,
+  footer {
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+}

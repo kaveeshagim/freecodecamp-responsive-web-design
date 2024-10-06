@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+:root {
+  --pale-blue: #eff4f8;
+  --light-blue: #c0d3ef;
+  --light-purple: #959bbd;
+  --pastel-blue: #465375;
+  --light-pink: #f3dbe9;
+  --white: #fff;
+  --black: #000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  background: linear-gradient(to bottom, var(--light-pink), var(--light-blue));
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%; /* Ensure full width */
+  display: flex;
+  align-items: center;
+  height: auto;
+  margin-bottom: 2rem;
+  padding: 1rem 0; /* Add some padding for aesthetics */
+  background-color: #fff; /* Optional: add a background color for better visibility */
+  z-index: 1000;
+  font-family: "Michroma", sans-serif;
+}
+
+header .container {
+  display: flex;
+  align-items: center; /* Align items vertically center */
+  width: 100%; /* Ensure full width */
+}
+
+header .logo img {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+#nav-bar {
+  display: flex;
+  flex-grow: 1; /* Allow nav-bar to take remaining space */
+  justify-content: center;
+}
+
+#nav-bar ul {
+  display: flex; /* Use flexbox for the list */
+  gap: 2rem; /* Equal gap between links */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  list-style: none; /* Remove bullet points */
+  font-size: 15px;
+}
+
+#nav-bar li a {
+  color: var(--black);
+  text-transform: lowercase;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#nav-bar li a:hover {
+  color: var(--pastel-blue);
+}
+
+#hero {
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Enable flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  text-align: center; /* Center align text */
+  background-color: var(--light-pink); /* Optional: background color */
+  padding-top: 100px; /* Add padding to push down from the top (adjust as needed) */
+  position: relative; /* Ensure the section is positioned relative to other elements */
+  margin-top: -80px; /* Adjust based on header height to overlap correctly */
+  font-family: "Michroma", sans-serif;
+}
+
+.hero-title {
+  z-index: 1; /* Ensure title is above any other overlapping elements */
+}
+
+.hero-main-title {
+  font-size: 3rem; /* Adjust font size as needed */
+  font-weight: bold; /* Bold title */
+  color: var(--black); /* Set title color */
+  margin: 0; /* Remove default margin */
+}
+
+.hero-slogan {
+  font-size: 1.5rem; /* Adjust slogan font size */
+  color: var(--pastel-blue); /* Set slogan color */
+  margin-top: 0.5rem; /* Add space between title and slogan */
+}
+
+#home {
+  padding: 3rem 1.5rem; /* Padding for spacing */
+  text-align: center; /* Center text alignment */
+}
+
+.home-content {
+  max-width: 800px; /* Limit the width of the content for better readability */
+  margin: 0 auto; /* Center the content horizontally */
+  line-height: 1.6; /* Improve line spacing for better readability */
+  color: var(--black); /* Text color */
+}
+
+.bold {
+  font-weight: bold; /* Make the welcome text bold */
+  font-size: 1.5rem; /* Increase font size for emphasis */
+}
+
+#products {
+  display: flex; /* Enable flexbox for centering */
+  justify-content: center; /* Center align the iframe horizontally */
+  padding: 2rem; /* Optional padding around the section */
+}
+
+#iframe {
+  width: 80%; /* Set the width to 80% of the parent container */
+  max-width: 640px; /* Optional: limit the maximum width */
+  height: auto; /* Maintain aspect ratio */
+  border: none; /* Remove border */
+}
+
+#pricing {
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center align the cards */
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  padding: 2rem; /* Padding around the pricing section */
+}
+
+.price-card {
+  background-color: var(--light-pink); /* Card background color */
+  border: 2px solid var(--pastel-blue); /* Card border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 1.5rem; /* Inner spacing */
+  margin: 1rem; /* Space between cards */
+  text-align: center; /* Center text within the card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+  width: 400px;
+}
+
+.price-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.title {
+  font-size: 1.5rem; /* Title size */
+  font-weight: bold; /* Bold title */
+  margin-bottom: 0.5rem; /* Space below the title */
+}
+
+.price {
+  font-size: 1.25rem; /* Price size */
+  color: var(--pastel-blue); /* Price color */
+}
+
+#contact {
+  padding: 2rem; /* Increased padding for better spacing */
+  margin: 1rem 0; /* Adjust margin for consistent spacing */
+  border: 2px solid var(--pastel-blue);
+  border-radius: 10px; /* Add rounded corners */
+  max-width: 600px; /* Constrain width for better focus */
+  margin: 2rem auto; /* Center align section */
+}
+
+#contact .contact-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem; /* Increase font size for prominence */
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column; /* Stack inputs vertically on small screens */
+  gap: 1rem; /* Space between the email input and button */
+  align-items: center; /* Center align form elements */
+}
+
+#contact form input[type="email"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid var(--pastel-blue);
+  border-radius: 5px; /* Rounded corners for inputs */
+}
+
+#contact form input[type="submit"] {
+  width: 100%;
+  max-width: 150px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--pastel-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact form input[type="submit"]:hover {
+  background-color: var(--light-purple);
+}
+
+footer {
+  background-color: var(--light-pink); /* Optional: Background color */
+  color: var(--black); /* Text color */
+  text-align: center; /* Center the text */
+  padding: 1rem 0; /* Add some padding */
+  position: relative; /* Position relative for any future positioning */
+  bottom: 0; /* Align to the bottom */
+  width: 100%; /* Full width */
+}
+
+.footer-container {
+  max-width: 1200px; /* Optional: limit the width of the footer content */
+  margin: 0 auto; /* Center the content */
+}
+
+@media (max-width: 768px) {
+  #contact {
+    padding: 1rem; /* Reduce padding */
+    max-width: 90%; /* Allow the section to take up more width */
+    margin: 2rem auto; /* Center align with more spacing */
+  }
+
+  #contact .contact-title {
+    font-size: 1.25rem; /* Slightly decrease font size */
+  }
+
+  #contact form input[type="email"] {
+    max-width: 100%; /* Make input fields full width */
+  }
+
+  #contact form input[type="submit"] {
+    max-width: 100%; /* Make the submit button full width */
+  }
+}

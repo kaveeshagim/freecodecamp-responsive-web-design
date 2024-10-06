@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">
+      Thank you for taking the time to help us improve the platform
+    </p>
+
+    <div class="box1">
+      <form id="survey-form">
+        <label id="name-label"
+          >Name
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name here"
+            required
+          /> </label
+        ><br /><br />
+        <label id="email-label"
+          >Email
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email here"
+            required
+          /> </label
+        ><br /><br />
+        <label id="number-label"
+          >Number
+          <input
+            type="number"
+            id="number"
+            min="5"
+            max="10"
+            placeholder="Enter your number here"
+            required
+          /> </label
+        ><br /><br />
+        <label id="drop"
+          >What is your favorite feature of freeCodeCamp?
+          <select id="dropdown">
+            <option>Challenges</option>
+            <option>Projects</option>
+            <option>Community</option>
+            <option>Open Source</option>
+          </select> </label
+        ><br /><br />
+
+        <label for="personal-account"
+          ><input
+            id="personal-account"
+            type="radio"
+            name="account-type"
+            class="inline"
+            value="account-type"
+          />
+          Personal Account</label
+        >
+        <label for="business-account"
+          ><input
+            id="business-account"
+            type="radio"
+            name="account-type"
+            class="inline"
+            value="account-type"
+          />
+          Business Account</label
+        ><br /><br />
+
+        <label for="terms-and-conditions">
+          <input
+            id="terms-and-conditions"
+            type="checkbox"
+            required
+            name="terms-and-conditions"
+            class="inline"
+            value="terms-and-conditions"
+          />
+          I accept the terms and conditions
+        </label>
+        <label for="age">
+          <input
+            id="age"
+            type="checkbox"
+            required
+            name="age"
+            class="inline"
+            value="age"
+          />I am over 18</label
+        ><br /><br />
+
+        <label for="bio"
+          >Additional Comments
+          <textarea
+            id="bio"
+            name="bio"
+            rows="3"
+            cols="30"
+            placeholder="I like coding on the beach..."
+          ></textarea
+          ><br /><br /><br />
+
+          <input type="submit" value="Submit" id="submit" />
+        </label>
+      </form>
+    </div>
+  </body>
+</html>
